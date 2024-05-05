@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabu Spiel</title>
+    <link rel="stylesheet" href="tabu.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <h1>Tabu!</h1>
+        <p id="instructions">Erkläre die Begriffe ohne die Tabu-Wörter zu verwenden!</p>
+        <button id="startButton">Spiel starten</button>
+        <div id="gameInterface" class="hidden">
+            
+            <div id="tabooCard">
+                <div id="wordDisplay"></div>
+            <div id="tabooWordsDisplay" class="hidden">
+                <ul id="tabooWordsList"></ul>
+            </div>
+        </div>
+            <div id="timerDisplay"></div>
+            <div id="scoreDisplay">
+                <div id="teamRed" class="team">
+                    <h2>Team Rot</h2>
+                    <p>Punktestand: <span id="scoreRed">0</span></p>
+                </div>
+                <div id="teamBlue" class="team">
+                    <h2>Team Blau</h2>
+                    <p>Punktestand: <span id="scoreBlue">0</span></p>
+                </div>
+            </div>
+            <button id="startNextRoundButton" class="hidden">Los</button>
+            <button id="nextButton">Nächste Karte</button>
+            <button id="correctButton">Wort erraten!</button>
+            <button id="tabooButton">Tabu-Wort benutzt</button>
+        </div>
+    </div>
+    <script src="tabu.js"></script>
+</body>
+</html>

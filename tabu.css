@@ -1,0 +1,102 @@
+body, html {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+body.team-red {
+    background-color: #FFDDDD;
+}
+
+body.team-blue {
+    background-color: #DDEEFF;
+}
+
+
+#gameContainer {
+    max-width: 600px;
+    margin: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#correctButton {
+    background-color: lightgreen;
+}
+
+#tabooButton {
+    background-color: red;
+}
+
+#nextButton {
+    background-color: lightblue;
+}
+
+#wordDisplay, #timerDisplay, #scoreDisplay {
+    margin: 20px;
+    font-size: 20px;
+}
+
+#tabooCard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: calc(100% - 40px); /* Adjust width minus padding */
+    transform: translateY(0);
+    transition: opacity 0.5, transform 0.5s;
+}
+
+#tabooWordsDisplay {
+    margin-top: 20px;
+}
+
+#tabooWordsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#tabooWordsList li {
+    padding: 5px 0; /* Space between list items */
+    border-bottom: 1px solid #eee; /* Visual separation of items */
+}
+#timerDisplay {
+    display: block;
+    margin: 5px;
+}
+
+#scoreDisplay{
+    display: flex;
+    justify-content: space-evenly;
+}
+.team {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+}
+
+#teamRed h2 {
+    color: red;
+}
+
+#teamBlue h2 {
+    color: blue;
+}
+
+#startNextRoundButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
