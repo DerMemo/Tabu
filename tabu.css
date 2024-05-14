@@ -1,102 +1,116 @@
-body, html {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 10px;
+body,
+html {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f9;
 }
 
 body.team-red {
-    background-color: #FFDDDD;
+  background-color: #ffdddd;
 }
 
 body.team-blue {
-    background-color: #DDEEFF;
+  background-color: #ddeeff;
 }
 
-
 #gameContainer {
-    max-width: 600px;
-    margin: auto;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 #correctButton {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }
 
 #tabooButton {
-    background-color: red;
+  background-color: red;
 }
 
 #nextButton {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
-#wordDisplay, #timerDisplay, #scoreDisplay {
-    margin: 20px;
-    font-size: 20px;
+#wordDisplay,
+#timerDisplay,
+#scoreDisplay {
+  margin: 20px;
+  font-size: 20px;
 }
 
 #tabooCard {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin: 20px auto;
-    width: calc(100% - 40px); /* Adjust width minus padding */
-    transform: translateY(0);
-    transition: opacity 0.5, transform 0.5s;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  width: calc(100% - 40px);
 }
 
 #tabooWordsDisplay {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #tabooWordsList {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 #tabooWordsList li {
-    padding: 5px 0; /* Space between list items */
-    border-bottom: 1px solid #eee; /* Visual separation of items */
-}
-#timerDisplay {
-    display: block;
-    margin: 5px;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
 }
 
-#scoreDisplay{
-    display: flex;
-    justify-content: space-evenly;
+#timerDisplay {
+  display: block;
+  margin: 5px;
 }
+
+#scoreDisplay {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .team {
-    margin: 10px;
-    padding: 10px;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
 }
 
 #teamRed h2 {
-    color: red;
+  color: red;
 }
 
 #teamBlue h2 {
-    color: blue;
+  color: blue;
 }
 
 #startNextRoundButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+input[type="number"] {
+  width: 200px;
 }

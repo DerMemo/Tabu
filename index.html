@@ -9,25 +9,33 @@
   <body>
     <div id="gameContainer">
       <h1>Tabu!</h1>
-      <p id="instructions">
+      <p id="instructions" class="vorauswahl">
         Erkläre die Begriffe ohne die Tabu-Wörter zu verwenden!
       </p>
-      <input
-        type="number"
-        id="timeSetting"
-        placeholder="Zeit pro Runde in Sekunden"
-        min="10"
-        max="300"
-      />
-      <input
-        type="number"
-        id="skipLimit"
-        placeholder="Maximale Anzahl Übersprünge"
-        min="0"
-        max="10"
-      />
-      <input type="text" id="teamNameRed" placeholder="Name für Team Rot" />
-      <input type="text" id="teamNameBlue" placeholder="Name für Team Blau" />
+      <div id="inputContainer">
+        <input
+          type="number"
+          id="timeSetting"
+          placeholder="Zeit pro Runde in Sekunden"
+          min="10"
+          max="300"
+        />
+        <input
+          type="number"
+          id="skipLimit"
+          placeholder="Maximale Anzahl Übersprünge"
+          min="0"
+          max="10"
+        />
+        <input type="text" id="teamNameRed" placeholder="Name für Team Rot" />
+        <input type="text" id="teamNameBlue" placeholder="Name für Team Blau" />
+        <input
+          type="number"
+          id="winningScore"
+          placeholder="Ziel-Punkanzahl"
+          min="1"
+        />
+      </div>
       <button id="startButton">Spiel starten</button>
       <div id="gameInterface" class="hidden">
         <div id="tabooCard">
@@ -53,6 +61,10 @@
         <button id="tabooButton">Tabu-Wort benutzt</button>
       </div>
     </div>
+    <audio id="startSound" src="sounds/gameStart.mp3" preload="auto"></audio>
+    <audio id="correctSound" src="sounds/erraten.mp3" preload="auto"></audio>
+    <audio id="tabooSound" src="sounds/fail.mp3" preload="auto"></audio>
+    <audio id="endSound" src="sounds/gameWin.mp3" preload="auto"></audio>
     <script src="tabu.js"></script>
   </body>
 </html>
