@@ -4,6 +4,7 @@ html {
   text-align: center;
   padding: 10px;
   background-color: #f4f4f9;
+  margin: 0;
 }
 
 body.team-red {
@@ -28,25 +29,43 @@ body.team-blue {
 }
 
 button {
-  margin: 10px;
+  margin: 10px 5px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s;
+  display: inline-block;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
 }
 
 #correctButton {
   background-color: lightgreen;
 }
 
+#correctButton:hover {
+  background-color: green;
+  color: white;
+}
+
 #tabooButton {
   background-color: red;
 }
 
+#tabooButton:hover {
+  background-color: darkred;
+  color: white;
+}
+
 #nextButton {
   background-color: lightblue;
+}
+
+#nextButton:hover {
+  background-color: deepskyblue;
+  color: white;
 }
 
 #wordDisplay,
@@ -87,13 +106,17 @@ button {
 #scoreDisplay {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .team {
-  margin: 10px;
+  margin: 5px; /* Reduced margin */
   padding: 10px;
   background-color: #f8f8f8;
   border: 1px solid #ddd;
+  flex: 1 1 45%;
+  max-width: 150px;
+  box-sizing: border-box;
 }
 
 #teamRed h2 {
@@ -109,8 +132,31 @@ button {
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-input[type="number"] {
-  width: 200px;
+input[type="number"],
+input[type="text"] {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+  }
+
+  .team {
+    flex: 1 1 45%;
+    max-width: 120px;
+  }
+
+  #tabooCard {
+    width: calc(100% - 20px);
+  }
 }

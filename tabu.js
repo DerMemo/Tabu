@@ -1,57 +1,96 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("startButton").addEventListener("click", function () {
-    document.getElementById("startNextRoundButton").classList.add("hidden");
-    document.getElementById("gameInterface").classList.remove("hidden");
-    playSound("startSound");
-    startGame();
-  });
+  const startButton = document.getElementById("startButton");
+  const startNextRoundButton = document.getElementById("startNextRoundButton");
+  const nextButton = document.getElementById("nextButton");
+  const tabooButton = document.getElementById("tabooButton");
+  const correctButton = document.getElementById("correctButton");
+
+  startButton.addEventListener("click", startGame);
+  startNextRoundButton.addEventListener("click", startNewRound);
+  nextButton.addEventListener("click", skipCard);
+  tabooButton.addEventListener("click", useTabooWord);
+  correctButton.addEventListener("click", guessCorrectWord);
 
   let skipsLeft;
+  let timerInterval;
   const gameData = {
     scoreRed: 0,
     scoreBlue: 0,
     currentCard: null,
-    timeLeft: 60, // Sekunden
+    timeLeft: 60,
     turn: "red",
     usedIndices: new Set(),
   };
 
-  const words = [
-    {
-      term: "Eisbär",
-      tabooWords: ["Eis", "Schnee", "Antarktis", "Polar", "Tier"],
-    },
-    {
-      term: "Handy",
-      tabooWords: ["tragbar", "drahtlos", "telefonieren", "SMS", "Internet"],
-    },
-    {
-      term: "Wien",
-      tabooWords: [
-        "Hauptstadt",
-        "Österreich",
-        "Bundesland",
-        "Bezirk",
-        "Europa",
-      ],
-    },
-  ];
+  let words = [];
 
-  let timerInterval;
+  // Wörter aus der externen JSON-Datei laden
+  fetch("words.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Netzwerkantwort war nicht ok " + response.statusText);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      words = data;
+      console.log("Wörter erfolgreich geladen:", words);
+      initializeGame();
+    })
+    .catch((error) => console.error("Error loading words:", error));
+
+  function initializeGame() {
+    // Event-Listener hinzufügen
+    startButton.addEventListener("click", startGame);
+    startNextRoundButton.addEventListener("click", startNewRound);
+    nextButton.addEventListener("click", skipCard);
+    tabooButton.addEventListener("click", useTabooWord);
+    correctButton.addEventListener("click", guessCorrectWord);
+  }
 
   function startGame() {
     resetGame();
     document.getElementById("gameInterface").classList.remove("hidden");
-    document.getElementById("inputContainer").classList.add("hidden"); // Verstecke Eingabefelder
+    document.getElementById("inputContainer").classList.add("hidden");
     gameData.timeLeft =
       parseInt(document.getElementById("timeSetting").value) || 60;
     skipsLeft = parseInt(document.getElementById("skipLimit").value) || 3;
     switchTeam();
     loadNewCard();
     updateScoreDisplay();
-    timerInterval = setInterval(updateTimer, 1000); // jede Sekunde wird der Timer aktualisiert
+    timerInterval = setInterval(updateTimer, 1000);
     manageRoundButtonVisibility();
-    hideInputFields();
+  }
+
+  function startNewRound() {
+    clearInterval(timerInterval);
+    gameData.timeLeft =
+      parseInt(document.getElementById("timeSetting").value) || 60;
+    skipsLeft = parseInt(document.getElementById("skipLimit").value) || 3;
+    timerInterval = setInterval(updateTimer, 1000);
+    loadNewCard();
+    switchTeam();
+  }
+
+  function skipCard() {
+    if (skipsLeft > 0) {
+      skipsLeft--;
+      loadNewCard();
+    } else {
+      alert("Keine weiteren Übersprünge erlaubt!");
+    }
+  }
+
+  function useTabooWord() {
+    playSound("tabooSound");
+    updateScore(-1);
+    loadNewCard();
+  }
+
+  function guessCorrectWord() {
+    playSound("correctSound");
+    updateScore(1);
+    loadNewCard();
   }
 
   function switchTeam() {
@@ -69,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function loadNewCard() {
     if (gameData.usedIndices.size === words.length || skipsLeft <= 0) {
-      gameData.usedIndices.clear(); // Optional: Set zurücksetzen, um von vorn zu beginnen
+      gameData.usedIndices.clear();
       return;
     }
 
@@ -80,19 +119,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     gameData.usedIndices.add(randomIndex);
     gameData.currentCard = words[randomIndex];
+    console.log("Aktuelle Karte:", gameData.currentCard); // Überprüfen Sie, ob die aktuelle Karte korrekt geladen wird
     document.getElementById(
       "wordDisplay"
     ).innerText = `Erkläre: ${gameData.currentCard.term}`;
     const tabooWordsList = document.getElementById("tabooWordsList");
     tabooWordsList.innerHTML = "";
 
-    // Hinzufügen jedes Tabu-Wortes als ein Listeneintrag
     gameData.currentCard.tabooWords.forEach((word) => {
       const listItem = document.createElement("li");
       listItem.innerText = word;
       tabooWordsList.appendChild(listItem);
     });
-    document.getElementById("tabooWordsDisplay").classList.remove("hidden"); // Zeige die Tabu-Wörter an
+
+    document.getElementById("tabooWordsDisplay").classList.remove("hidden");
   }
 
   function updateTimer() {
@@ -147,19 +187,8 @@ document.addEventListener("DOMContentLoaded", function () {
     resetGame();
   }
 
-  function startNewRound() {
-    clearInterval(timerInterval);
-    gameData.timeLeft =
-      parseInt(document.getElementById("timeSetting").value) || 60;
-    skipsLeft = parseInt(document.getElementById("skipLimit").value) || 3;
-    timerInterval = setInterval(updateTimer, 1000);
-    loadNewCard();
-    switchTeam();
-  }
-
   function manageRoundButtonVisibility() {
     const button = document.getElementById("startNextRoundButton");
-    // Wir prüfen, ob der Timer abgelaufen ist
     if (gameData.timeLeft <= 0) {
       button.classList.remove("hidden");
     } else {
@@ -167,15 +196,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function hideInputFields() {
-    document.getElementById("inputContainer").classList.add("hidden");
-  }
-
   function resetGame() {
     gameData.scoreRed = 0;
     gameData.scoreBlue = 0;
     gameData.currentCard = null;
-    gameData.usedIndices.clear;
+    gameData.usedIndices.clear();
     document.getElementById("scoreBlue").innerText = "0";
     document.getElementById("scoreRed").innerText = "0";
     document.getElementById("gameInterface").classList.add("hidden");
@@ -190,39 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (sound) {
       sound.play();
     } else {
-      console.error("SoundElement mit ID " + soundId + "nicht gefunden.");
+      console.error("SoundElement mit ID " + soundId + " nicht gefunden.");
     }
   }
-  document
-    .getElementById("startNextRoundButton")
-    .addEventListener("click", function () {
-      playSound("startSound");
-      this.classList.add("hidden");
-      startNewRound();
-    });
-
-  // Event-Handler für den "Nächste Karte"-Knopf
-  document.getElementById("nextButton").addEventListener("click", function () {
-    if (skipsLeft > 0) {
-      skipsLeft--;
-      loadNewCard();
-    } else {
-      alert("Jetzt ist genug!!");
-    }
-  });
-
-  // Event-Handler für den "Tabu-Wort benutzt"-Knopf
-  document.getElementById("tabooButton").addEventListener("click", function () {
-    // Punktabzug bei Nutzung eines Tabu-Wortes
-    playSound("tabooSound");
-    updateScore(-1);
-    loadNewCard();
-  });
-  document
-    .getElementById("correctButton")
-    .addEventListener("click", function () {
-      playSound("correctSound");
-      updateScore(1);
-      loadNewCard();
-    });
 });

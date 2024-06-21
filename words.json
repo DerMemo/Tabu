@@ -1,0 +1,415 @@
+[
+    {
+      "term": "Eisbär",
+      "tabooWords": ["Eis", "Schnee", "Antarktis", "Polar", "Tier"]
+    },
+    {
+      "term": "Handy",
+      "tabooWords": ["tragbar", "drahtlos", "telefonieren", "SMS", "Internet"]
+    },
+    {
+      "term": "Wien",
+      "tabooWords": ["Hauptstadt", "Österreich", "Bundesland", "Bezirk", "Europa"]
+    },
+    {
+      "term": "Computer",
+      "tabooWords": ["Laptop", "PC", "Monitor", "Tastatur", "Maus"]
+    },
+    {
+      "term": "Auto",
+      "tabooWords": ["Fahrzeug", "Straße", "Reifen", "Motor", "Fahrer"]
+    },
+    {
+      "term": "Hund",
+      "tabooWords": ["Bellen", "Haustier", "Fell", "Leine", "Vierbeiner"]
+    },
+    {
+      "term": "Buch",
+      "tabooWords": ["Lesen", "Seiten", "Cover", "Autor", "Kapitel"]
+    },
+    {
+      "term": "Flugzeug",
+      "tabooWords": ["Fliegen", "Pilot", "Luft", "Reise", "Flughafen"]
+    },
+    {
+      "term": "Pflanze",
+      "tabooWords": ["Grün", "Wasser", "Topf", "Blume", "Garten"]
+    },
+    {
+      "term": "Kamera",
+      "tabooWords": ["Foto", "Objektiv", "Bild", "Fotograf", "Aufnahme"]
+    },
+    {
+      "term": "Haus",
+      "tabooWords": ["Gebäude", "Wohnung", "Dach", "Fenster", "Tür"]
+    },
+    {
+      "term": "Zug",
+      "tabooWords": ["Bahn", "Schiene", "Lokomotive", "Fahrkarte", "Gleis"]
+    },
+    {
+      "term": "Mond",
+      "tabooWords": ["Nacht", "Himmel", "Erde", "Sonne", "Sterne"]
+    },
+    {
+      "term": "Fahrrad",
+      "tabooWords": ["Rad", "Pedal", "Kette", "Lenker", "Fahren"]
+    },
+    {
+      "term": "Brücke",
+      "tabooWords": ["Fluss", "Straße", "Überqueren", "Fahrbahn", "Konstruktion"]
+    },
+    {
+      "term": "Schokolade",
+      "tabooWords": ["Süß", "Kakao", "Tafel", "Naschen", "Lecker"]
+    },
+    {
+      "term": "Schule",
+      "tabooWords": ["Lehrer", "Unterricht", "Klasse", "Schüler", "Bildung"]
+    },
+    {
+      "term": "Meer",
+      "tabooWords": ["Wasser", "Ozean", "Strand", "Wellen", "Schwimmen"]
+    },
+    {
+      "term": "Gitarre",
+      "tabooWords": ["Instrument", "Musik", "Saiten", "Spielen", "Konzert"]
+    },
+    {
+      "term": "Lampe",
+      "tabooWords": ["Licht", "Schalter", "Glühbirne", "Leuchten", "Tisch"]
+    },
+    {
+      "term": "Kaffee",
+      "tabooWords": ["Trinken", "Bohnen", "Tasse", "Koffein", "Morgen"]
+    },
+    {
+      "term": "Film",
+      "tabooWords": ["Kino", "Leinwand", "Schauspieler", "Regisseur", "Drehbuch"]
+    },
+    {
+      "term": "Tisch",
+      "tabooWords": ["Möbel", "Essen", "Beine", "Stuhl", "Platte"]
+    },
+    {
+      "term": "Radio",
+      "tabooWords": ["Hören", "Sender", "Musik", "Nachrichten", "Wellen"]
+    },
+    {
+      "term": "Pizza",
+      "tabooWords": ["Teig", "Käse", "Tomate", "Ofen", "Italien"]
+    },
+    {
+      "term": "Stadt",
+      "tabooWords": ["Metropole", "Gebäude", "Menschen", "Verkehr", "Zentrum"]
+    },
+    {
+      "term": "Berg",
+      "tabooWords": ["Hoch", "Wandern", "Gipfel", "Klettern", "Natur"]
+    },
+    {
+      "term": "Computer",
+      "tabooWords": ["Laptop", "PC", "Monitor", "Tastatur", "Maus"]
+    },
+    {
+      "term": "Schloss",
+      "tabooWords": ["König", "Märchen", "Türme", "Mittelalter", "Prinzessin"]
+    },
+    {
+      "term": "Fußball",
+      "tabooWords": ["Spiel", "Ball", "Tor", "Mannschaft", "Stadion"]
+    },
+    {
+      "term": "Garten",
+      "tabooWords": ["Blumen", "Pflanzen", "Grün", "Rasen", "Bäume"]
+    },
+    {
+      "term": "Küche",
+      "tabooWords": ["Kochen", "Essen", "Herd", "Schrank", "Kühlschrank"]
+    },
+    {
+      "term": "Buch",
+      "tabooWords": ["Lesen", "Seiten", "Cover", "Autor", "Kapitel"]
+    },
+    {
+      "term": "Schwimmbad",
+      "tabooWords": ["Wasser", "Schwimmen", "Becken", "Sommer", "Freizeit"]
+    },
+    {
+      "term": "Uhr",
+      "tabooWords": ["Zeit", "Armband", "Zifferblatt", "Sekunde", "Minuten"]
+    },
+    {
+      "term": "Auto",
+      "tabooWords": ["Fahrzeug", "Straße", "Reifen", "Motor", "Fahrer"]
+    },
+    {
+      "term": "Kamera",
+      "tabooWords": ["Foto", "Objektiv", "Bild", "Fotograf", "Aufnahme"]
+    },
+    {
+      "term": "Kino",
+      "tabooWords": ["Film", "Leinwand", "Popcorn", "Sitzplatz", "Projektor"]
+    },
+    {
+      "term": "Einkaufen",
+      "tabooWords": ["Geschäft", "Kaufen", "Waren", "Geld", "Tasche"]
+    },
+    {
+      "term": "Fernsehen",
+      "tabooWords": ["Programm", "Sender", "Bildschirm", "Fernbedienung", "Show"]
+    },
+    {
+      "term": "Zahnarzt",
+      "tabooWords": ["Zähne", "Bohrer", "Praxis", "Mund", "Behandlung"]
+    },
+    {
+      "term": "Strand",
+      "tabooWords": ["Sand", "Meer", "Sonne", "Urlaub", "Baden"]
+    },
+    {
+      "term": "Apfel",
+      "tabooWords": ["Obst", "Baum", "Frucht", "Saft", "Grün"]
+    },
+    {
+      "term": "Fahrrad",
+      "tabooWords": ["Rad", "Pedal", "Kette", "Lenker", "Fahren"]
+    },
+    {
+      "term": "Zeitung",
+      "tabooWords": ["Artikel", "Nachrichten", "Druck", "Papier", "Lesen"]
+    },
+    {
+      "term": "Bäckerei",
+      "tabooWords": ["Brot", "Kuchen", "Ofen", "Teig", "Brötchen"]
+    },
+    {
+      "term": "Koffer",
+      "tabooWords": ["Reise", "Packen", "Gepäck", "Urlaub", "Flughafen"]
+    },
+    {
+      "term": "Schule",
+      "tabooWords": ["Lehrer", "Unterricht", "Klasse", "Schüler", "Bildung"]
+    },
+    {
+      "term": "Flughafen",
+      "tabooWords": ["Flugzeug", "Reise", "Terminal", "Gepäck", "Abflug"]
+    },
+    {
+      "term": "Post",
+      "tabooWords": ["Brief", "Paket", "Versenden", "Briefmarke", "Postbote"]
+    },
+    {
+      "term": "Frühstück",
+      "tabooWords": ["Morgen", "Essen", "Müsli", "Kaffee", "Brötchen"]
+    },
+    {
+      "term": "Geburtstag",
+      "tabooWords": ["Feiern", "Alter", "Party", "Kuchen", "Geschenk"]
+    },
+    {
+      "term": "Farbe",
+      "tabooWords": ["Bunt", "Malen", "Pinsel", "Farben", "Palette"]
+    },
+    {
+      "term": "Schnee",
+      "tabooWords": ["Winter", "Kalt", "Weiß", "Flocken", "Schneemann"]
+    },
+    {
+      "term": "Bank",
+      "tabooWords": ["Geld", "Konto", "Sparen", "Kredit", "Filiale"]
+    },
+    {
+      "term": "Spiel",
+      "tabooWords": ["Gewinnen", "Verlieren", "Spaß", "Brettspiel", "Karten"]
+    },
+    {
+      "term": "Sommer",
+      "tabooWords": ["Sonne", "Hitze", "Urlaub", "Ferien", "Strand"]
+    },
+    {
+      "term": "Winter",
+      "tabooWords": ["Kälte", "Schnee", "Eis", "Weihnachten", "Winterjacke"]
+    },
+    {
+      "term": "Herbst",
+      "tabooWords": ["Blätter", "Ernte", "Regen", "Kühle", "Jahreszeit"]
+    },
+    {
+      "term": "Frühling",
+      "tabooWords": ["Blumen", "Erwachen", "Grün", "Wärme", "Jahreszeit"]
+    },
+    {
+      "term": "Büro",
+      "tabooWords": ["Arbeiten", "Schreibtisch", "Computer", "Chef", "Kollegen"]
+    },
+    {
+      "term": "Bahnhof",
+      "tabooWords": ["Zug", "Gleis", "Reisen", "Ticket", "Ankunft"]
+    },
+    {
+      "term": "Eisenbahn",
+      "tabooWords": ["Schiene", "Zug", "Lokomotive", "Waggon", "Bahnhof"]
+    },
+    {
+      "term": "Taxi",
+      "tabooWords": ["Auto", "Fahren", "Geld", "Passagier", "Stadt"]
+    },
+    {
+      "term": "Polizei",
+      "tabooWords": ["Gesetz", "Schutz", "Auto", "Uniform", "Verbrechen"]
+    },
+    {
+      "term": "Arzt",
+      "tabooWords": ["Krankenhaus", "Patient", "Behandlung", "Medizin", "Praxis"]
+    },
+    {
+      "term": "Zirkus",
+      "tabooWords": ["Clown", "Akrobat", "Vorstellung", "Tiere", "Manege"]
+    },
+    {
+      "term": "Sport",
+      "tabooWords": ["Bewegung", "Fitness", "Training", "Spiel", "Wettkampf"]
+    },
+    {
+      "term": "Erdbeere",
+      "tabooWords": ["Obst", "Rot", "Sommer", "Beeren", "Süß"]
+    },
+    {
+      "term": "Camping",
+      "tabooWords": ["Zelt", "Natur", "Lagerfeuer", "Schlafen", "Urlaub"]
+    },
+    {
+      "term": "Hochzeit",
+      "tabooWords": ["Braut", "Bräutigam", "Ringe", "Feier", "Liebe"]
+    },
+    {
+      "term": "Bergsteigen",
+      "tabooWords": ["Klettern", "Gipfel", "Höhe", "Seil", "Natur"]
+    },
+    {
+      "term": "Stern",
+      "tabooWords": ["Himmel", "Nacht", "Leuchten", "Astronomie", "Sonne"]
+    },
+    {
+      "term": "Museum",
+      "tabooWords": ["Kunst", "Ausstellung", "Besucher", "Geschichte", "Exponate"]
+    },
+    {
+      "term": "Theater",
+      "tabooWords": ["Bühne", "Schauspieler", "Vorstellung", "Publikum", "Drama"]
+    },
+    {
+      "term": "Oper",
+      "tabooWords": ["Gesang", "Bühne", "Orchester", "Musik", "Vorstellung"]
+    },
+    {
+      "term": "Zirkus",
+      "tabooWords": ["Clown", "Akrobat", "Vorstellung", "Tiere", "Manege"]
+    },
+    {
+      "term": "Markt",
+      "tabooWords": ["Kaufen", "Verkaufen", "Stände", "Frisch", "Bauern"]
+    },
+    {
+      "term": "Zoo",
+      "tabooWords": ["Tiere", "Gehege", "Besucher", "Exotisch", "Artenschutz"]
+    },
+    {
+      "term": "Bibliothek",
+      "tabooWords": ["Bücher", "Lesen", "Ausleihen", "Still", "Wissen"]
+    },
+    {
+      "term": "Kirche",
+      "tabooWords": ["Gottesdienst", "Gebet", "Pfarrer", "Glaube", "Religion"]
+    },
+    {
+      "term": "Universität",
+      "tabooWords": ["Studieren", "Professor", "Campus", "Vorlesung", "Student"]
+    },
+    {
+      "term": "Rathaus",
+      "tabooWords": ["Bürgermeister", "Verwaltung", "Stadt", "Amt", "Behörde"]
+    },
+    {
+      "term": "Regen",
+      "tabooWords": ["Nass", "Wetter", "Tropfen", "Wolken", "Schirm"]
+    },
+    {
+      "term": "Schirm",
+      "tabooWords": ["Regen", "Schutz", "Wetter", "Nass", "Hand"]
+    },
+    {
+      "term": "Kino",
+      "tabooWords": ["Film", "Leinwand", "Popcorn", "Sitzplatz", "Projektor"]
+    },
+    {
+      "term": "Schule",
+      "tabooWords": ["Lehrer", "Unterricht", "Klasse", "Schüler", "Bildung"]
+    },
+    {
+      "term": "Einkaufen",
+      "tabooWords": ["Geschäft", "Kaufen", "Waren", "Geld", "Tasche"]
+    },
+    {
+      "term": "Garten",
+      "tabooWords": ["Blumen", "Pflanzen", "Grün", "Rasen", "Bäume"]
+    },
+    {
+      "term": "Schloss",
+      "tabooWords": ["König", "Märchen", "Türme", "Mittelalter", "Prinzessin"]
+    },
+    {
+      "term": "Straße",
+      "tabooWords": ["Autos", "Verkehr", "Asphalt", "Fahren", "Stadt"]
+    },
+    {
+      "term": "Fahrrad",
+      "tabooWords": ["Rad", "Pedal", "Kette", "Lenker", "Fahren"]
+    },
+    {
+      "term": "Apfel",
+      "tabooWords": ["Obst", "Baum", "Frucht", "Saft", "Grün"]
+    },
+    {
+      "term": "Hund",
+      "tabooWords": ["Bellen", "Haustier", "Fell", "Leine", "Vierbeiner"]
+    },
+    {
+      "term": "Katze",
+      "tabooWords": ["Schnurren", "Haustier", "Miau", "Fell", "Krallen"]
+    },
+    {
+      "term": "Vogel",
+      "tabooWords": ["Fliegen", "Flügel", "Schnabel", "Feder", "Nest"]
+    },
+    {
+      "term": "Gold",
+      "tabooWords": ["Metall", "Geld", "Schatz", "Wertvoll", "Ring"]
+    },
+    {
+      "term": "Silber",
+      "tabooWords": ["Metall", "Schmuck", "Edel", "Farbe", "Medaille"]
+    },
+    {
+      "term": "Feuer",
+      "tabooWords": ["Brennen", "Hitze", "Flamme", "Lagerfeuer", "Gefahr"]
+    },
+    {
+      "term": "Wasser",
+      "tabooWords": ["Trinken", "Flüssigkeit", "Nass", "Meer", "See"]
+    },
+    {
+      "term": "Erde",
+      "tabooWords": ["Boden", "Planet", "Welt", "Natur", "Humus"]
+    },
+    {
+      "term": "Luft",
+      "tabooWords": ["Atmen", "Wind", "Gas", "Himmel", "Fliegen"]
+    },
+    {
+      "term": "Tee",
+      "tabooWords": ["Trinken", "Heiß", "Tasse", "Kräuter", "Aufguss"]
+    }
+    ]
+  
